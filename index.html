@@ -1,0 +1,55 @@
+<!----------------------------------------------------
+**** Name: index.html
+**** Created by lfortes on 11/23/2014.
+------------------------------------------------------>
+<!DOCTYPE html>
+
+<html ng-app="sgridApp">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Angular Slickgrid integration example</title>
+
+    <!-- load bootstrap CSS from cdn -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+
+    <!-- local CSS -->
+    <link rel="stylesheet" href="slickgrid/styles/slick.grid.css" />
+    <link rel="stylesheet" href="slickgrid/styles/jquery-ui-1.8.16.custom.css" />
+    <link rel="stylesheet" href="slickgrid/styles/examples.css">
+
+
+</head>
+
+<body ng-controller="GridController as gridCtrl">
+
+    <div class="container jumbotron text-center">
+        <h3>Angular Slickgrid integration example</h3>
+    </div>
+
+     <div my-grid style="width:600px;height:500px;" grid-columns="gridCtrl.columns" grid-options="gridCtrl.options" grid-data="gridCtrl.data"
+             edit-row="gridCtrl.deleteTask(row)" class="container myGrid" id="myGrid">
+    </div>
+
+    <dfn class="container text-center">
+        <h4>Double click on a row to delete it.</h4>
+    </dfn>
+
+<!-- load slickgrid JS from cdn -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" defer></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+
+<!-- load local JS -->
+<script src="slickgrid/scripts/jquery.event.drag.js"></script>
+<script src="slickgrid/scripts/slick.core.js"></script>
+<script src="slickgrid/scripts/slick.grid.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
